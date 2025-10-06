@@ -1,0 +1,217 @@
+/* 순위판 페이지 스타일 */
+.leaderboard-page {
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.last-update {
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    background: white;
+}
+
+/* 내 순위 카드 */
+.my-rank-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px 20px;
+    margin-bottom: 16px;
+}
+
+.my-rank-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.rank-message {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* 상위 5명 미니 차트 */
+.top-mini-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.mini-chart-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.mini-avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.mini-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.highlight-badge {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background: #4CAF50;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.mini-name {
+    font-size: 11px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.mini-bar {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mini-bar.rank-1 {
+    height: 80px;
+    background: rgba(255, 215, 0, 0.3);
+}
+
+.mini-bar.rank-2 {
+    height: 70px;
+    background: rgba(192, 192, 192, 0.3);
+}
+
+.mini-bar.rank-3 {
+    height: 60px;
+    background: rgba(205, 127, 50, 0.3);
+}
+
+/* 순위 리스트 */
+.ranking-list {
+    background: white;
+    padding: 12px 0;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 16px;
+    transition: background 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.ranking-item:hover {
+    background: #f8f8f8;
+}
+
+.ranking-item.current-user {
+    background: #e8f5e9;
+    border-left-color: #4CAF50;
+}
+
+.ranking-item.gold {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+}
+
+.ranking-item.silver {
+    background: linear-gradient(90deg, rgba(192, 192, 192, 0.1), transparent);
+}
+
+.ranking-item.bronze {
+    background: linear-gradient(90deg, rgba(205, 127, 50, 0.1), transparent);
+}
+
+.rank-number {
+    width: 32px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #666;
+}
+
+.ranking-item.gold .rank-number,
+.ranking-item.silver .rank-number,
+.ranking-item.bronze .rank-number {
+    font-size: 24px;
+}
+
+.user-avatar {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.current-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #4CAF50;
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 2px solid white;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.user-level {
+    font-size: 13px;
+    color: #999;
+}
+
+.user-xp {
+    text-align: right;
+}
+
+.xp-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4CAF50;
+    display: block;
+}
+
+.xp-label {
+    font-size: 11px;
+    color: #999;
+}
