@@ -1,0 +1,211 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Toto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+/* 배경 애니메이션 */
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 20s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+    animation-delay: 7s;
+}
+
+.circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 10%;
+    animation-delay: 14s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-50px) translateX(30px); }
+}
+
+/* 메인 컨테이너 */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 로고 영역 */
+.logo-section {
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.app-title {
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 미리보기 스탯 카드 */
+.preview-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 20px 10px;
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.stat-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 시작 버튼 */
+.start-button {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.start-button:active {
+    transform: translateY(0);
+}
+
+.start-button span {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.start-button:hover span {
+    transform: scale(1.1);
+}
+
+/* 추가 정보 */
+.info-text {
+    margin-top: 20px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 480px) {
+    .app-title {
+        font-size: 24px;
+    }
+    
+    .logo {
+        font-size: 60px;
+    }
+    
+    .stat-card {
+        padding: 15px 8px;
+    }
+    
+    .stat-icon {
+        font-size: 24px;
+    }
+    
+    .stat-text {
+        font-size: 12px;
+    }
+}
